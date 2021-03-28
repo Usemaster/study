@@ -1,9 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf8" ?>
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <properties resource="db.properties"/>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    
+    <typeAliases>
+        <typeAlias type="com.study.pojo.User"/>
+    </typeAliases>
+
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -15,7 +26,11 @@
             </dataSource>
         </environment>
     </environments>
+
+
+    <!--绑定接口-->
     <mappers>
-        <mapper resource="com/study/dao/UserMapper.xml"/>
+        <mapper class="com.study.dao.UserMapper"/>
     </mappers>
+
 </configuration>

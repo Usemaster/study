@@ -13,10 +13,11 @@ public class MybatisUtils {
     private static SqlSessionFactory sqlSessionFactory;
 
     static {
+        InputStream inputStream = null;
         try {
             //使用Mybatis第一步：获取sqlSessionFactory对象
             String resource = "mybatis-config.xml";
-            InputStream inputStream = Resources.getResourceAsStream(resource);
+            inputStream = Resources.getResourceAsStream(resource);
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -26,7 +27,7 @@ public class MybatisUtils {
     }
 
     public static SqlSession getSqlSession(){
-        return sqlSessionFactory.openSession();
+        return sqlSessionFactory.openSession(true);
     }
 
 }
