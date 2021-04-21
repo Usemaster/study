@@ -8,10 +8,11 @@
 
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="cacheEnabled" value="true"/>
     </settings>
-    
+
     <typeAliases>
-        <typeAlias type="com.study.pojo.User"/>
+        <package name="com.study.pojo"/>
     </typeAliases>
 
 
@@ -28,8 +29,7 @@
     </environments>
 
     <mappers>
-        <mapper class="com.study.dao.TeacherMapper"/>
-        <mapper class="com.study.dao.StudentMapper"/>
+        <mapper class="com.study.dao.UserMapper"/>
     </mappers>
 
 
