@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <link rel="stylesheet" href="css/me.css" >
+</head>
+<body>
+<!-- 导航 -->
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary menu">
+            <a href="index.html"><h2 class="ui teal header item">校园失物招领</h2></a>
+            <a href="index.html" class="item "><i class="mini home icon"></i>首页</a>
+            <a href="announce.html" class="item"><i class="mini edit icon"></i>发布</a>
+            <a href="mine.html" class="item active "><i class="mini user icon"></i>我的</a>
+            <div class="right m-item  menu">
+                <div class="ui dropdown  item" >
+
+                    <div class="text">
+                        <img class="ui avatar image" src="images/3.jpg" id="personImg">
+                        <span id="username">kappy</span>
+                    </div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu" id="personDiv">
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="m-container m-padded-tb-large">
+    <div class="ui container">
+        <div class="ui grid">
+            <!-- 左边启示列表 -->
+            <div class="eleven wide column">
+
+                <!-- header -->
+                <div class="ui top attached segment ">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui teal header">启事</h3>
+                        </div>
+                        <div class="right aligned column">
+                            共<h2 class="ui orange header m-inline-block m-text-thin">
+                            <span id="listCount">0</span></h2>篇
+                        </div>
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="ui attached segment" id="listDiv">
+
+
+
+
+                </div>
+            </div>
+
+            <div class="five wide column">
+                <div class="ui card" id="myCardDiv">
+                    <script type="text/tmplate" id="myCardInfo">
+					 <div class="field">
+                         <div style="text-align: center;">
+                            <img style="width: 150px;height: 150px;" src="{{photo}}" />
+                         </div>
+					 </div>
+					  <div class="content">
+						<div class="inline fields">
+							<label class="m-text-thin " style="margin-right:0.5em;">用户名:</label>
+							<a style="color: black;">{{username}}</a>
+						</div>
+<!--					    <div class="inline fields">-->
+<!--					    	<label class="m-text-thin" style="margin-right:0.5em;">邮箱:</label>-->
+<!--					    	<a style="color: black;">{{email}}</a>-->
+<!--					    </div>-->
+					    <div class="inline fields">
+					        <label class="m-text-thin " style="margin-right:0.5em;">年龄:</label>
+					        <a style="color: black;">{{age}}</a>
+					    </div>
+
+						<div class="inline fields">
+						    <label class="m-text-thin " style="margin-right:0.5em;">性别:</label>
+						    <a style="color: black;">{{sex}}</a>
+						</div>
+<!--						<div class="inline fields">-->
+<!--						    <label class="m-text-thin " style="margin-right:0.5em;">上次登录:</label>-->
+<!--						    <a style="color: black;">{{lastTime}}</a>-->
+<!--						</div>-->
+					  </div>
+					  <div class="extra content">
+					    <label class="m-text-thin " style="margin-right:0.5em;">个性签名:</label>
+					     <p style="color: black;">{{personalSay}}</p>
+					  </div>
+					  <div class="extra content">
+					    <div id="modelShow" onclick="showWin2()" class="ui fluid  teal  button">编辑</div>
+					  </div>
+					  </script>
+                </div>
+
+
+
+                <h4 class="ui horizontal divider header m-margin-top-large">我的打赏码</h4>
+
+                <div class="ui centered card" style="width: 150px;">
+                    <img src="images/erwei.png" id="ewCodeId" style="width: 150px;height: 150px"/>
+                </div>
+
+                <!-- 模态框 -->
+                <form id="personModal" class="ui modal" method="post"  enctype="multipart/form-data">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        个人信息
+                    </div>
+
+                    <div class="image content">
+                        <div class="ui medium image">
+                            <div class="field">
+                                <div id="imgPreview1" >
+                                    <div id="prompt3">
+                                 <span id="imgSpan" class="ui center">
+                                     <p class="m-text-thin m-text-spaced m-opacity-mini" >点击上传头像</p><!--style="color:beige;margin-top: 1em;margin-left: 1em;"-->
+                                     <i class="large upload icon" ></i>
+                                 </span>
+                                        <input name="upload" type="file" id="file" class="filepath" onchange="changepic(this)" accept="image/jpg,image/jpeg,image/png,image/PNG">
+                                        <!--当vaule值改变时执行changepic函数，规定上传的文件只能是图片-->
+                                    </div>
+                                    <img style="width: 150px;height: 150px" src="" id="img3" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-left: 0.1em;"></div>
+                        <div class="ui form" style="margin-top: 0.3em;">
+
+                            <div class="inline fields">
+                                <label class="m-text-thin ">性别:</label>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input value="男" type="radio" name="sex" checked="checked">
+                                        <label class="m-text-thin ">男</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input value="女" type="radio"  name="sex">
+                                        <label class="m-text-thin ">女</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <label class="m-text-thin ">年龄:</label>
+                                <div class="ui input focus">
+                                    <input name="age" type="text" placeholder="请填写您的年龄!">
+                                </div>
+                            </div>
+                            <div class="extra content" style="margin-top:0.5em ;">
+                                <label class="m-text-thin ">个签:</label>
+                                <div class="ui input focus">
+                                    <input name="personalSay" type="text" placeholder="快来编辑你的个签吧...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-left: 0.1em;"></div>
+                        <div class="ui medium image">
+                            <div class="field" style="padding-left: 100px;">
+                                <div id="imgPreview5" >
+                                    <div id="prompt5">
+                                 <span id="imgSpan5" class="ui center">
+                                     <p class="m-text-thin m-text-spaced m-opacity-mini" >点击上传打赏码</p><!--style="color:beige;margin-top: 1em;margin-left: 1em;"-->
+                                     <i class="large upload icon" ></i>
+                                 </span>
+                                        <input name="upload2" type="file" id="file5" class="filepath" onchange="changepic5(this)" accept="image/jpg,image/jpeg,image/png,image/PNG">
+                                        <!--当vaule值改变时执行changepic函数，规定上传的文件只能是图片-->
+                                    </div>
+                                    <img style="width: 150px;height: 150px" src="" id="img5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <input id="modelCLose" type="button" class="ui black deny button  button" value="取消">
+                        <input type="button" onclick="editUserInfo()" class="ui positive right  button" value="确定">
+                    </div>
+                </form>
+
+                <form class="ui modal" id="statusModal"  method="post">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        修改物品状态
+                    </div>
+                    <div class="image content">
+                        <div>
+                            <input type="hidden" name="postID" id="postID">
+                            <label class="m-text-thin ">状态:</label>
+                            <div class="ui input focus">
+                                <!--                <input type="text">-->
+                                <select class="ui dropdown" name="status">
+                                    <option value="0">已完成</option>
+                                    <option value="1">进行中</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <input type="button" onclick="updateStatus()" class="ui positive right  button" value="确定">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 底部footer -->
+
+<!-- 底部footer -->
+<!-- 底部footer -->
+<footer class="ui inverted vertical segment m-padded-tb-massive ">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="images/erwei.png" class="ui rounded image" alt="" style="width: 110px;">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">常见问题</h4>
+                <div class="ui inverted link list">
+                    <a href="feedback.html" class="item" >点击反馈</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我们</h4>
+                <div class="ui inverted link list">
+                    <a class="item m-text-thin">Email：2603195345@qq.com</a>
+                    <a class="item m-text-thin">QQ：2603195345</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">关于我们</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">失物招领是开发的校园失物找回项目案例，希望可以给来到这儿的人们带来帮助...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 LostFound </p>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script src="js/axios.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mustache.js/4.1.0/mustache.js"></script>
+<script src="admin/js/config.js"></script>
+
+
+<script>
+
+    /**
+     * 修改记录的状态信息
+     */
+    function updateStatus(){
+        var postId=statusModal.postID.value;
+        var status=statusModal.status.value;
+        var values={};
+        values.id=postId;
+        values.status=status;
+        axios.post('post/updateStatus',values).then(function(res){
+            if(res.code==200){
+                window.location.href="mine.html"
+            }
+            window.location.href="mine.html"
+        })
+    }
+
+    /**
+     * 编辑提交工作
+     */
+    function editUserInfo(){
+        //获取到值信息
+        var sex=personModal.sex.value;
+        var age=personModal.age.value;
+        var personalSay=personModal.personalSay.value;
+        var upload=document.getElementById("file").files[0];
+        console.log(document.getElementById("file5"));
+        var upload2=document.getElementById("file5").files[0];
+        //发送信息到后台 发布工作
+        var values={};
+        values.sex=sex;
+        values.age=age;
+        values.personalSay=personalSay;
+        values.upload=upload;
+        values.upload2=upload2;
+        //formdata
+        var formdata=new FormData();
+        formdata.append("upload",upload);
+        formdata.append("upload2",upload2);
+        formdata.append("user", new Blob([JSON.stringify(values)], {type: "application/json"}));
+        let config={headers:{'Content-Type':'multipart/form-data'}};
+        axios.post('user/edit',formdata,config).then(function(res){
+            window.location.href="mine.html";
+        })
+    }
+
+
+
+    axios.post('post/queryMyList').then(function(res){
+        var datas=res.data.list;
+        $("#listCount").html(datas.length);
+        //组装图片信息
+        var photo=SURL+ res.data.user.photo;
+        res.data.user.photo=photo;
+
+        //获取外围的div标签
+        var tem=document.getElementById("listDiv");
+        var content='';
+        for(let obj of datas) {
+            var img=SURL+obj.picture;
+            content += `
+			 <div class="ui padded vertical segment m-padded-tb-large">
+				<div class="ui mobile reversed stackable grid">
+				  <div class="eleven wide column">
+				<div class="ui grid">
+				 <div class="eleven wide column">
+
+				  <div class="ui mini horizontal link list">
+					<div class="item">
+				   <img src="${photo}" class="ui avatar image">
+				   <div class="content"><a href="#" class="header">${obj.uname}</a></div>
+					</div>
+
+                    <div class="item">
+                    <div ${obj.status == 1 && obj.flag == 0 ? '' : 'style="display:none;"'} onclick="Values(${obj.id})"  class="ui orange label horizontal" data-tooltip="暂未找到">寻物启事</div>
+					<div ${obj.status == 0 && obj.flag == 0 ? '' : 'style="display:none;"'}  onclick="Values(${obj.id})" class="ui green label horizontal" data-tooltip="已经找到">寻物启事</div>
+					<div ${obj.status == 0 && obj.flag == 1 ? '' : 'style="display:none;"'} onclick="Values(${obj.id})"  class="ui yellow label horizontal" data-tooltip="已经认领">失物招领</div>
+					<div ${obj.status == 1 && obj.flag == 1 ? '' : 'style="display:none;"'}  onclick="Values(${obj.id})"  class="ui blue label horizontal" data-tooltip="正在寻找">失物招领</div>
+              </div>
+
+            <div class="item">
+           <i class="tag icon"></i> ${obj.typeName}
+            </div>
+            <div class="item">
+           <i class="calendar icon"></i>
+            </div>
+          </div>
+         </div>
+              </div>
+        <div class="ui mini horizontal link list">
+         <div class="item">
+          <h3 class="ui header">${obj.title}</h3>
+         </div>
+            <div class="item">
+          <i  class="map pin icon"></i> ${obj.address}
+            </div>
+        </div>
+
+        <p  class="m-text">${obj.content}</p>
+        <div class="ui grid">
+         <div class="eleven wide column">
+          <div class="ui mini horizontal link list">
+           <div class="item">
+            <i class="comment icon"></i>
+                                                ${obj.counts} comments
+           </div>
+              <div class="item">
+            <i class="eye icon"></i> ${obj.viewCount}
+              </div>
+           <div class="item" style="margin-left: 2em;">
+            <i class=" red trash alternate outline icon"></i>
+            <a onclick="deletePost(${obj.id})">删除</a>
+           </div>
+
+          </div>
+
+         </div>
+         <div class="right aligned five wide column">
+            <a href="detail.html?postId=${obj.id}" class="ui teal basic button m-padded-tiny m-text-thin">查看详情</a>
+         </div>
+        </div>
+
+       </div>
+
+          <div class="five wide column">
+        <a href="#" >
+         <${img}  src="images" class="ui rounded image">
+        </a>
+          </div>
+        </div>
+      </div>
+			`;
+        }
+        tem.innerHTML=content;
+
+        //个人信息部分
+
+        var template=document.getElementById("myCardInfo").innerHTML;
+        var view=Mustache.render(template,res.data.user);
+        document.getElementById("myCardDiv").innerHTML=view;
+        //设置个人的二维码
+        var erwei=SURL+res.data.user.rewardCode;
+        $("#ewCodeId").attr("src",erwei);
+
+        //根据类型判断个人退出 后台显示
+        var type=localStorage.getItem("type");
+        var personDiv=document.getElementById("personDiv");
+        let personContent=`
+                           <a  ${type=='1'?'':'style="display:none"'} href="admin/index.html" class="item">进入管理员界面</a>
+                           <a href="repassword.html" class="item">重置密码</a>
+                           <a href="javascript:;" onclick="loginOut()" class="item">退出</a>
+            `;
+        personDiv.innerHTML=personContent;
+
+        //个人名称和图片
+        //设置名称
+        $("#username").html(localStorage.getItem("username"));
+        $("#personImg").attr("src",res.data.user.photo);
+
+        // //渲染编辑部分数据 显示可自带
+        // personModal.sex.value=res.data.list.sex;
+        // personModal.age.value=res.data.list.age;
+        // personModal.personalSay.value=res.data.list.personalSay;
+
+    })
+
+    function showWin(){
+        $("#modelShow").on("click",function () {
+            $("#personModal").modal("show");
+        });
+        $("#modelCLose").on("click",function () {
+            $("#personModal").modal("hide");
+        });
+    }
+
+    function showWin2(){
+        $("#personModal").modal("show");
+    }
+
+    /**
+     * 退出
+     */
+    function loginOut(){
+        localStorage.clear();
+        window.location.href="login.html";
+    }
+
+
+
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    function changepic() {
+        $("#prompt3").css("display", "none");
+        var reads = new FileReader();
+        f = document.getElementById('file').files[0];
+        reads.readAsDataURL(f);
+        reads.onload = function(e) {
+            document.getElementById('img3').src = this.result;
+            $("#img3").css("display", "block");
+        };
+    }
+    function changepic5() {
+        $("#prompt5").css("display", "none");
+        var reads = new FileReader();
+        f = document.getElementById('file5').files[0];
+        reads.readAsDataURL(f);
+        reads.onload = function(e) {
+            document.getElementById('img5').src = this.result;
+            $("#img5").css("display", "block");
+        };
+    }
+
+    function changepic2() {
+        $("#prompt2").css("display", "none");
+        var reads = new FileReader();
+        f = document.getElementById('file2').files[0];
+        reads.readAsDataURL(f);
+        reads.onload = function(e) {
+            document.getElementById('img2').src = this.result;
+            $("#img2").css("display", "block");
+        };
+    }
+
+    /**
+     * 删除发布信息
+     * @param postID
+     * @constructor
+     */
+    function deletePost(postId){
+        var values={};
+        values.id=postId;
+        axios.post('post/deletePostById',values).then(function(res){
+            //直接刷新页面
+            window.location.href="mine.html";
+        })
+    }
+
+
+    function Values(postID) {
+        $('#postID').val(postID);
+        $("#statusModal").modal("show");
+    }
+
+</script>
+</body>
+</html>

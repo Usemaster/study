@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <link rel="stylesheet" href="css/me.css" >
+</head>
+<body>
+	<!-- 导航 -->
+	<nav class="ui inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui inverted secondary menu">
+                <a href="index.html"><h2 class="ui teal header item">校园失物招领</h2></a>
+                  <a href="index.html" class="item active"><i class="mini home icon"></i>首页</a>
+                <a href="announce.html" class="item"><i class="mini edit icon"></i>发布</a>
+                <a href="mine.html" class="item "><i class="mini user icon"></i>我的</a>
+                <div  class="right m-item item m-mobile-hide">
+                    <form method="get" class="ui icon inverted transparent input m-margin-tb-tiny">
+                        <input type="text" name="content" placeholder="Search....">
+                        <i class="search link icon"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+	<!-- 中间内容 -->
+	<div class="m-container m-padded-tb-large">
+		<div class="ui container">
+			<div class="ui grid">
+				<!-- 左边启示列表 -->
+				<div class="eleven wide column">
+
+					<!-- header -->
+					<div class="ui top attached segment ">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<h3 class="ui teal header">启事</h3>
+							</div>
+							<div class="right aligned column">
+								共<h2 class="ui orange header m-inline-block m-text-thin">
+								<span id="postList"></span>
+							</h2>篇
+							</div>
+						</div>
+					</div>
+					<!-- content -->
+					<div class="ui attached segment" id="mainDiv">
+
+
+					</div>
+					<!-- footer -->
+					<!--<div class="ui bottom attached segment">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+
+							</div>
+                            <div class="right aligned column">
+
+                            </div>
+                            <div class="center column">
+                                <label>总共1页，当前第1页</label>
+                            </div>
+
+						</div>
+					</div>-->
+				</div>
+				<!-- 右边标签公告等展示 -->
+				<div class="five wide column">
+					<!-- 标签展示 -->
+					<div class="ui segments m-margin-top-large">
+					  <div class="ui secondary segment">
+					    <div class="ui two column grid">
+					      <div class="column">
+					        <i class="tags icon"></i>标签
+					      </div>
+
+					    </div>
+					  </div>
+					  <div class="ui teal segment" id="bqDiv">
+
+					  </div>
+					</div>
+					<!-- 分类 -->
+
+					<div class="ui segments m-margin-top-large">
+					  <div class="ui secondary segment">
+					    <div class="ui two column grid">
+					      <div class="column">
+					        <i class="bookmark icon"></i>分类
+					      </div>
+
+					    </div>
+					  </div>
+					  <div class="ui teal segment" id="typeDiv">
+
+					  </div>
+					</div>
+					<!-- 公告 -->
+					<div class="ui segments m-margin-top-large">
+					  <div class="ui secondary segment">
+					    <div class="ui two column grid">
+					      <div class="column">
+					        <i class="bell icon"></i>公告
+					      </div>
+
+					    </div>
+					  </div>
+					  <div class="ui teal segment">
+					    <div class="ui fluid vertical menu">
+                            <a data-tooltip="这是一个最新的公告信息" style="text-align: center;" class="item">
+								<span id="noticeContent"></span>
+							</a>
+                            <div style="text-align: center;">
+                                <label><span id="noticeTime"></span></label>
+                            </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- 二维码 -->
+					<h4 class="ui horizontal divider header m-margin-top-large">扫码联系我们</h4>
+					<div class="ui centered card" style="width: 11em">
+					    <img src="images/erwei.png" alt="" class="ui rounded image" >
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部footer -->
+
+	<!-- 底部footer -->
+	<footer class="ui inverted vertical segment m-padded-tb-massive ">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="images/erwei.png" class="ui rounded image" alt="" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">常见问题</h4>
+                    <div class="ui inverted link list">
+                        <a href="feedback.html" class="item" >点击反馈</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我们</h4>
+                    <div class="ui inverted link list">
+                        <a class="item m-text-thin">Email：2603195345@qq.com</a>
+                        <a class="item m-text-thin">QQ：2603195345</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">关于我们</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">失物招领是开发的校园失物找回项目案例，希望可以给来到这儿的人们带来帮助...</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 LostFound </p>
+        </div>
+    </footer>
+    <!--	/*/<th:block th:replace="fragment::script">/*/-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+	<script src="js/axios.js"></script>
+	<script src="admin/js/config.js"></script>
+    <!--    /*/</th:block>/*/-->
+    <script>
+		//默认调用
+		getPost();
+
+		//高级条件的查询
+		function getPost(flag,status,type,title) {
+			var values={};
+			if (flag!=null){
+				values.flag=flag;
+				values.status=status;
+			}
+			if (type!=null){
+				values.typeName=type;
+			}
+			if (title!=null){
+				values.title=title;
+			}
+
+			//通过axios向后台发送请求
+			axios.post('post/queryIndexList',values).then(function (response) {
+				var data =response.data;
+				console.log(data);
+				//获取postlist集合
+				var postlist= data.list;
+				//渲染数据
+				let content='';
+				for (let obj of postlist){
+					content+=`
+					<div class="ui padded vertical segment m-padded-tb-large">
+					  <div class="ui mobile reversed stackable grid">
+						<div class="eleven wide column">
+					<div class="ui grid">
+					<div class="eleven wide column">
+
+					<div class="ui mini horizontal link list">
+					  <div class="item">
+					<img src="images/3.jpg"  class="personal ui avatar image"
+																		data-postid="33">
+					<div class="content">${obj.uname}</div>
+					  </div>
+
+
+					  <div class="item">
+						<!--flag 1为失物招领，0为寻物启事 status 1为进行中，0为结束-->
+						<div ${obj.status == 1 && obj.flag == 0 ? '' : 'style=display:none'} class="ui orange label horizontal" data-tooltip="暂未找到">寻物启事</div>
+						<div ${obj.status == 0 && obj.flag == 0 ? '' : 'style=display:none'} class="ui green label horizontal" data-tooltip="已经找到">寻物启事</div>
+						<div ${obj.status == 0 && obj.flag == 1 ? '' : 'style=display:none'} class="ui yellow label horizontal" data-tooltip="已经认领">失物招领</div>
+						<div ${obj.status == 1 && obj.flag == 1 ? '' : 'style=display:none'} class="ui blue label horizontal" data-tooltip="正在寻找">失物招领</div>
+
+					  </div>
+
+					  <div class="item">
+					<i class="tag icon"></i> ${obj.typeName}
+					  </div>
+					  <div class="item">
+					<i class="calendar icon"></i> ${obj.ctime}
+					  </div>
+					</div>
+					</div>
+							</div>
+					<div class="ui mini horizontal link list">
+					<div class="item">
+					<h3 class="ui header">${obj.title}</h3>
+					</div>
+						<div class="item">
+					<i  class="map pin icon"></i> ${obj.address}
+						</div>
+					</div>
+
+					<p class="m-text">${obj.content}</p>
+					<div class="ui grid">
+					<div class="eleven wide column">
+					<div class="ui mini horizontal link list">
+					<div class="item">
+					<i class="comment icon"></i>
+																	${obj.counts} comments
+					</div>
+						<div class="item">
+					<i class="eye icon"></i>
+																	${obj.viewCount}
+						</div>
+					</div>
+
+					</div>
+					<div class="right aligned five wide column">
+					  <a href="detail.html?postId=${obj.id}" class="ui teal basic button m-padded-tiny m-text-thin">查看详情</a>
+					</div>
+					</div>
+
+					</div>
+
+						<div class="five wide column">
+					<a href="#" target="_blank">
+					<img src="${picture}" alt="" class="ui rounded image">
+					</a>
+						</div>
+					  </div>
+					</div>
+				`;
+				}
+				//获取外围div标签
+				var mainDiv = document.getElementById("mainDiv");
+				mainDiv.innerHTML=content;
+
+				//标签的渲染
+				var bqDiv = document.getElementById("bqDiv");
+				var bqContent=`
+			 <a href="javascript:void(0)" onclick="getPost(1,1)" class="ui teal basic left pointing label m-margin-tb-large">
+				   正在寻找 <div class="detail">${data.wswzl}</div>
+				 </a>
+			  <a href="javascript:void(0)" onclick="getPost(1,0)" class="ui teal basic left pointing label m-margin-tb-large">
+				已经找到 <div class="detail">${data.swzl}</div>
+			  </a>
+			  <a href="javascript:void(0)" onclick="getPost(0,1)" class="ui teal basic left pointing label m-margin-tb-large">
+				等待认领 <div class="detail">${data.wxwqs}</div>
+			  </a>
+			  <a href="javascript:void(0)" onclick="getPost(0,0)" class="ui teal basic left pointing label m-margin-tb-large">
+				已被认领 <div class="detail">${data.xwqs}</div>
+			  </a>
+			`;
+				bqDiv.innerHTML=bqContent;
+
+				//渲染类型并渲染数量
+				var typeDiv=document.getElementById("typeDiv");
+				var typeContent='';
+				var typeList= data.typeList;
+				for(let type of typeList){
+					name=type.typeName;
+					typeContent+=`
+                         <a href="javascript:void(0)" onclick="getPost(null,null,'${name}')" class="ui teal basic left pointing label m-margin-tb-large">
+                              ${type.typeName}<div class="detail">${type.counts}</div>
+                 `
+				}
+				typeDiv.innerHTML=typeContent;
+
+				//渲染公告信息
+				$("#noticeContent").html(data.notice.content);
+				$("#noticeTime").html(data.notice.ctime);
+
+				//渲染总的记录数据
+				$("#postList").html(postlist.length);
+
+			}).catch(function (error) {
+
+			})
+		}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <link rel="stylesheet" href="css/me.css" >
+</head>
+
+<body>
+	<!-- 导航 -->
+    <!-- 导航 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui inverted secondary menu">
+                <a href="index.html"><h2 class="ui teal header item">校园失物招领</h2></a>
+                <a href="index.html" class="item active"><i class="mini home icon"></i>首页</a>
+                <a href="announce.html" class="item"><i class="mini edit icon"></i>发布</a>
+                <a href="mine.html" class="item "><i class="mini user icon"></i>我的</a>
+                <div  class="right m-item item m-mobile-hide">
+                    <form method="get" class="ui icon inverted transparent input m-margin-tb-tiny">
+                        <input type="text" name="content" placeholder="Search....">
+                        <i class="search link icon"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+	
+	<!-- 中间内容 -->
+	<div class="m-container m-padded-tb-large" style="margin-left: 15em !important;">
+		<div class="ui container">
+			<div class="ui grid">
+				<!-- 左边启示列表 -->
+				<div class="thirteen wide column">
+					
+					<!-- header -->
+					<div class="ui top attached segment ">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<h3 class="ui teal header">详情</h3>
+							</div>
+							
+						</div>
+					</div>
+					<!-- content -->
+					<div class="ui attached segment">
+						
+						<div class="ui padded vertical segment m-padded-tb-large">
+							<div class="ui mobile reversed stackable grid">
+								<div class="eleven wide column" style="margin-left: 2em;margin-right: 3em;">
+									<div class="ui grid">
+										<div class="eleven wide column">
+											
+											<div class="ui mini horizontal link list" >
+											  <div class="item">
+												<img src="images/3.jpg" id="personImg" alt="" class="personal ui avatar image">
+												  <div class="content"><span id="username"></span></div>
+											  </div>
+                                                <div class=" ui personalInfo fluid popup top left transition hidden 33" id="personId">
+                                                    <script type="text/tmplate" id="person_id">
+                                                        <div class="ui">
+                                                            <p>用户名：{{username}}</p>
+                                                            <p>性别：{{sex}}</p>
+                                                            <p>年龄：{{age}}</p>
+                                                            <p>个性签名：{{personalSay}}</p>
+                                                        </div>
+                                                        <div class="ui" style="margin-left: 50px">
+                                                            <img src="img/erwei.png" class="ui image" style="width: 120px;height: 120px;">
+                                                            <p style="margin-left: 25px">微信打赏码</p>
+                                                        </div>
+                                                    </script>
+                                                </div>
+
+
+											  <div class="item" style="margin-left: 1em;" id="flagDiv">
+
+											  </div>
+
+
+											  <div class="item" style="margin-left: 2em;">
+												<i class="tag icon"></i> <span id="typename"></span>
+											  </div>
+											  <div class="item" style="margin-left: 2em;">
+												<i class="calendar icon"></i> <span id="ctime"></span>
+											  </div>
+											</div>
+										</div>
+								    </div>	
+									<div class="ui mini horizontal link list">
+										<div class="item">
+											<h3 class="ui header"><span id="title"></span></h3>
+										</div>
+									    <div class="item" style="margin-left: 2em;">
+											<i  class="map pin icon"></i> <span id="address"></span>
+									    </div>
+									</div>
+									
+									<p class="m-text"><span id="content"></span></p>
+									<div class="ui grid">
+										<div class="nine wide column">
+											<div class="ui mini horizontal link list">
+												<div class="item">
+													<i class="comment icon"></i>
+													<span id="counts"></span> comments
+												</div>
+											    <div class="item" style="margin-left: 2em;">
+													<i class="eye icon"></i> <span id="viewCount"></span>
+											    </div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+									
+								</div>
+
+								<!--图片信息-->
+
+								<div class="three wide column">
+									<a href="#" target="_blank">
+										<img src="" id="bigphoto" class="ui rounded image">
+									</a>	    
+								</div>
+
+                                <div class="ui comments" style="margin-left: 2em;width: 100%">
+                                    <h3 class="ui dividing header">评论</h3>
+                                </div>
+
+								<div class="ui comments" style="margin-left: 2em;width: 100%" id="commentDiv">
+                                   <script type="text/tmplate" id="personInfo">
+                                   {{#commentList}}
+                                   <div class="comment">
+								    <a class="avatar">
+								      <img src="/images/3f225184df654318945e7abb8f81511c_3.png"
+                                           class="reply image ui" data-commentid="31">
+								    </a>
+                                      <div class=" ui personalInfo fluid popup top left transition hidden 31">
+                                          <div class="ui">
+                                              <p>用户名：kappy</p>
+                                              <p>性别：女</p>
+                                              <p>年龄：2</p>
+                                              <p>个性签名：好好</p>
+                                          </div>
+                                          <div class="ui" style="margin-left: 50px">
+                                              <img src="" class="ui image" style="width: 120px;height: 120px;">
+                                              <p style="margin-left: 25px">微信打赏码</p>
+                                          </div>
+
+                                      </div>
+
+								    <div class="content">
+								      <a class="author">{{uname}}</a>
+								      <div class="metadata">
+								        <span class="date">{{ctime}}</span>
+								      </div>
+								      <div class="text">{{content}}</div>
+								      <div class="actions">
+								        <a data-parentid="{{id}}"
+                                           data-parentname="{{uname}}<"
+                                           onclick="toReply(this)" class="reply">回复</a>
+								      </div>
+
+
+								    </div>
+                                      <div class="comments">
+                                          <div class="comment">
+                                          	{{#list}}
+                                              <a class="avatar">
+                                                  <img src="/images/3f225184df654318945e7abb8f81511c_3.png"
+                                                        class="multireply image ui" data-ctid="1" >
+                                              </a>
+                                              <div class=" ui personalInfo fluid popup top left transition hidden 1">
+                                                  <div class="ui">
+                                                      <p>用户名：kappy</p>
+                                                      <p>性别：女</p>
+                                                      <p>年龄：2</p>
+                                                      <p>个性签名：好好</p>
+                                                  </div>
+                                                  <div class="ui" style="margin-left: 50px">
+                                                      <img src="" class="ui image" style="width: 120px;height: 120px;">
+                                                      <p style="margin-left: 25px">微信打赏码</p>
+                                                  </div>
+
+                                              </div>
+
+                                              <div class="content">
+                                                  <a class="author">{{uname}}</a>
+                                                  <div class="metadata">
+                                                      <span class="date">{{ctime}}</span>
+                                                  </div>
+                                                  <div class="text">{{content}}</div>
+                                                  <div class="actions">
+                                                      <a data-parentid="{{parent}}" onclick="toReply(this)" class="reply" data-parentname="kappy">回复</a>
+                                                  </div>
+                                              </div>
+                                            {{/list}}
+                                          </div>
+                                      </div>
+								  </div>
+                                </div>
+
+							    {{/commentList}}
+
+								  <form class="ui reply form" >
+								    <div class="field"  >
+								      <textarea id="mycomment" placeholder="评论一下吧!"></textarea>
+								    </div>
+								    <div data-parentid="{{parent}}" data-postid="{{id}}" id="fabu"
+                                         onclick="reflushComment(this)" class="ui blue labeled submit icon button">
+								      <i class="icon edit"></i>发布
+								    </div>
+								  </form>
+                                 </script>
+								</div>    
+							
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+			
+				
+			</div>
+		</div>
+
+	</div>	
+	
+	<!-- 底部footer -->
+		
+	<!-- 底部footer -->
+    <!-- 底部footer -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive ">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="images/erwei.png" class="ui rounded image" alt="" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">常见问题</h4>
+                    <div class="ui inverted link list">
+                        <a href="feedback.html" class="item" >点击反馈</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我们</h4>
+                    <div class="ui inverted link list">
+                        <a class="item m-text-thin">Email：2603195345@qq.com</a>
+                        <a class="item m-text-thin">QQ：2603195345</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">关于我们</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">失物招领是开发的校园失物找回项目案例，希望可以给来到这儿的人们带来帮助...</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021 LostFound </p>
+        </div>
+    </footer>
+
+
+    <!--	/*/<th:block th:replace="fragment::script">/*/-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/mustache.js/4.1.0/mustache.js"></script>
+    <script src="js/axios.min.js"></script>
+    <!--    /*/</th:block>/*/-->
+    <script>
+
+        //接收postId
+        var postId = getQueryString("postId");
+        console.log(postId);
+        var values={};
+        values.postId=postId;
+        //向后端发送请求
+        axios.post('http://localhost:8888/post/queryCommentList',values).then(function (res) {
+            var data = res.data;
+            console.log(data);
+
+            //个人信息模板的渲染
+            var userData=data.user;
+            var tem = document.getElementById("person_id").innerHTML;
+            var s = Mustache.render(tem,userData);
+            document.getElementById("personId").innerHTML = s;
+
+            //引入评论信息的模板
+            var template = document.getElementById("personInfo").innerHTML;
+            var view = Mustache.render(template,data);
+            document.getElementById("commentDiv").innerHTML = view;
+
+            //详细post信息的渲染
+			$("#content").html(data.content);
+			$("#username").html(data.uname);
+			$("#uname").html(userData.username);
+			$("#typename").html(data.typeName);
+			$("#title").html(data.title);
+			$("#content").html(data.content);
+			$("#address").html(data.address);
+			$("#ctime").html(data.ctime);
+			$("#viewCount").html(data.viewCount);
+			$("#counts").html(data.counts);
+			$("#bigphoto").attr("src",data.picture);
+			$("#photo").attr("src",userData.photo);
+
+			//渲染状态信息
+			var flagDiv=document.getElementById("flagDiv");
+			let con=`
+                    <div ${data.status==1 && data.flag==0 ?'' : 'style="display:none;"'}  class="ui orange label horizontal" data-tooltip="暂未找到">寻物启事</div>
+					<div ${data.status==0 && data.flag==0 ?'' : 'style="display:none;"'}    class="ui green label horizontal" data-tooltip="已经找到">寻物启事</div>
+					<div ${data.status==0 && data.flag==1 ?'' : 'style="display:none;"' }  class="ui yellow label horizontal" data-tooltip="已经认领">失物招领</div>
+					<div ${data.status==1 && data.flag==1 ?'' : 'style="display:none;"'}  class="ui blue label horizontal" data-tooltip="正在寻找">失物招领</div>
+            `;
+			flagDiv.innerHTML=con;
+
+        }).catch()
+
+        //获取条件 对应的值信息
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2]); return null;
+        }
+
+        function reflushComment(obj) {
+            var postId = $(obj).data('postid');
+            var parentId = $(obj).data('parentid');
+            var comment = $("#mycomment").val();
+
+            //向后台发布请求，实现发布功能处理
+			var datas={};
+			datas.postId=postId;
+			datas.parent=parentId;
+			datas.content=comment;
+
+			axios.post('http://localhost:8888/comment/add',datas).then(function (res) {
+				if (res.status==200){
+					$("#mycomment").val('');
+					location.reload();
+				}
+			});
+
+            // $.ajax({
+            //     url: "addcomment",
+            //     dataType: "JSON",
+            //     type: "post",
+            //     async: true,
+            //     data: {comment:comment,postId:postId,parentId:parentId},
+            //     success: function (response) {
+            //         console.log(response);
+            //         console.log(typeof response);
+            //         if (response==1){
+            //             $('#mycomment').val('');
+            //             location.reload();
+            //         }if (response==0){
+            //             location.href="login";
+            //         }
+            //     },
+            //     error: function (error) {
+            //         console.log(error);
+            //     }
+            // });
+        }
+       function toReply(obj){
+           $('#mycomment').attr('placeholder',"@"+$(obj).data("parentname")).focus();
+           $('#fabu').attr('data-parentid',$(obj).data("parentid"));
+       }
+       $('.image.personal').mouseover(function () {
+                var current = this;
+                var postId = $(this).data('postid');
+                $(current).popup({
+                    popup:$('.personalInfo.popup.'+postId),
+                    target: current,
+                    on:'click'
+                });
+            });
+       $('.image.reply').mouseover(function () {
+                var current = this;
+                var commentid = $(this).data('commentid');
+                $(current).popup({
+                    popup:$('.personalInfo.popup.'+commentid),
+                    target: current,
+                    on:'click'
+                });
+            });
+       $('.image.multireply').mouseover(function () {
+                var current = this;
+                var ctid = $(this).data('ctid');
+                $(current).popup({
+                    popup:$('.personalInfo.popup.'+ctid),
+                    target: current,
+                    on:'click'
+                });
+            });
+    </script>
+</body>
+</html>

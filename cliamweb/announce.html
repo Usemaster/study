@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <link rel="stylesheet" href="css/me.css" >
+</head>
+<body>
+	<!-- 导航 -->
+	<nav class="ui inverted attached segment m-padded-tb-mini">
+		<div class="ui container">
+			<div class="ui inverted secondary menu">
+				<a href="index.html"><h2 class="ui teal header item">校园失物招领</h2></a>
+				<a href="index.html" class="item "><i class="mini home icon"></i>首页</a>
+				<a href="announce.html" class="item active"><i class="mini edit icon"></i>发布</a>
+				<a href="mine.html" class="item "><i class="mini user icon"></i>我的</a>
+				<div  class="right m-item item m-mobile-hide">
+					<form method="get" class="ui icon inverted transparent input m-margin-tb-tiny">
+						<input type="text" name="content" placeholder="Search....">
+						<i class="search link icon"></i>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- 中间内容 -->
+	<div class="m-container m-padded-tb-large">
+		<div class="ui container">
+			<div class="ui grid">
+				
+				<div class="twenty wide column">
+					
+					<!-- header -->
+					<div class="ui top attached segment ">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<h3 class="ui teal header">发布</h3>
+							</div>
+							
+						</div>
+					</div>
+					<!-- content -->
+                    <form class="ui attached segment" name="uploadForm" id="uploadForm" method="post" enctype="multipart/form-data">
+						<div class="ui padded vertical segment m-padded-tb-large">
+							<div class="ui mobile reversed stackable grid">
+								<!--发布-->
+								    <div class="ui form" >
+								        <div class="field">
+								            <label><b>类型：</b></label>
+								            <div class="field inline" >
+								                <div class="ui radio checkbox">
+								                    <input type="radio" name="flag" value="0">
+								                    <label>寻物启事</label>
+								                </div>
+								            </div>
+								            <div class="field inline" >
+								                <div class="ui radio checkbox">
+								                    <input type="radio" name="flag" value="1">
+								                    <label>认领启事</label>
+								                </div>
+								            </div>
+								        </div>
+								        <div class="field" id="typeDiv">
+											<script type="text/tmplate" id="typeTmp">
+												<label><b>分类：</b></label>
+												<select class="ui dropdown" name="typeName">
+													<option >-请选择一个类别-</option>
+													{{# data}}
+													<option value="{{typeName}}">{{typeName}}</option>
+													{{/ data}}
+												</select>
+											</script>
+								        </div>
+										<div class="field">
+										   <label>标题：</label> 
+										</div>
+								       
+								    </div>
+									
+									<div class="ui form" style="width: 100%; height: 100%;min-height:100px">
+									    <div class="field">	
+									        <input name="title" type="text" maxlength="40">
+									    </div>
+									    <div class="field ">
+											<label>详情：</label> 
+									        <textarea name="content" rows="6" placeholder="今天中午大概12点的时候,从食堂离开忘了拿走餐桌上的校园卡,有捡到的吗?看到请联系我,请你喝奶茶哦!" maxlength="300"
+									                  class="tweet-textarea disabled-resize"></textarea>
+									    </div>
+										<div class="field">
+										    <label>图片：</label>
+										    <div id="imgPreview">
+										     <div id="prompt3">
+										     <span id="imgSpan" class="ui center">
+												<p class="m-text-thin m-text-spaced m-opacity-mini" >点击上传</p>
+												<i class="large upload icon"></i>
+										     </span>
+										     <input name="upload" type="file" id="file" class="filepath" onchange="changepic(this)" accept="image/jpg,image/jpeg,image/png,image/PNG">
+										     <!--当vaule值改变时执行changepic函数，规定上传的文件只能是图片-->
+										     </div>
+										     <img style="width: 150px;height: 150px" src="" id="img3" />
+										    </div>
+											
+										</div>
+										<div class="field">
+										    <label>地点：</label>
+										    <input name="address" type="text" maxlength="25"  placeholder="选填">
+										</div>
+										<div class="actions">
+										    <input type="button" onclick="addInfo()" class="ui primary right floated m-margin-tb-large  button" value="确认">
+										    <input type="button" class="ui right floated m-margin-tb-large button" value="取消">
+										</div>
+									</div>
+
+							</div>
+						</div>
+                    </form>
+
+					
+				</div>
+				
+			
+				
+			</div>
+		</div>
+
+	</div>	
+	
+	<!-- 底部footer -->
+		
+	<!-- 底部footer -->
+	<footer class="ui inverted vertical segment m-padded-tb-massive ">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="images/erwei.png" class="ui rounded image" alt="" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">常见问题</h4>
+                    <div class="ui inverted link list">                  
+                        <a href="/feedback" class="item" >点击反馈</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我们</h4>
+                    <div class="ui inverted link list">
+                        <a class="item m-text-thin">Email：2603195345@qq.com</a>
+                        <a class="item m-text-thin">QQ：2603195345</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">关于我们</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">LostFound是开发的校园失物找回项目案例，希望可以给来到这儿的人们带来帮助...</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2019 - 2020 LostFound </p>
+        </div>
+    </footer>
+    <!--	/*/<th:block th:replace="fragment::script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/mustache.js/4.1.0/mustache.js"></script>
+	<script src="js/axios.js"></script>
+    <!--    /*/</th:block>/*/-->
+    <script>
+		//添加启事信息
+		function addInfo() {
+			//获取到值信息
+			var flag=uploadForm.flag.value;
+			var title=uploadForm.title.value;
+			var typeName=uploadForm.typeName.value;
+			var content=uploadForm.content.value;
+			var upload=document.getElementById("file").files[0];
+			var address=uploadForm.address.value;
+
+			//发送信息到后台 发布工作
+			var values={};
+			values.flag=flag;
+			values.title=title;
+			values.typeName=typeName;
+			values.content=content;
+			values.upload=upload;
+			values.address=address;
+			//formdata
+			var formdata=new FormData();
+			formdata.append("upload",upload);
+			formdata.append("post", new Blob([JSON.stringify(values)], {type: "application/json"}));
+			let config={headers:{'Content-Type':'multipart/form-data'}};
+			axios.post('post/add',formdata,config).then(function(res){
+				window.location.href="index.html";
+			})
+
+		}
+
+		//类型的渲染
+		axios.post('type/list',{}).then(function (res) {
+			// var data = res.data;
+			//创建type模板
+			var tem = document.getElementById("typeTmp").innerHTML;
+			var s = Mustache.render(tem,res);
+			document.getElementById("typeDiv").innerHTML=s;
+		});
+
+        function changepic() {
+         $("#prompt3").css("display", "none");
+         var reads = new FileReader();
+         f = document.getElementById('file').files[0];
+         reads.readAsDataURL(f);
+         reads.onload = function(e) {
+         document.getElementById('img3').src = this.result;
+         $("#img3").css("display", "block");
+         };
+        }
+    </script>
+
+</body>
+</html>
