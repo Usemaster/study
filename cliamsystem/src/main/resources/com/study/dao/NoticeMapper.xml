@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.dao.NoticeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.study.pojo.Notice">
+                <id column="id" property="id"/>
+                <result column="cuser" property="cuser"/>
+                <result column="content" property="content"/>
+                <result column="ctime" property="ctime"/>
+                <result column="title" property="title"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cuser, content, ctime, title
+    </sql>
+
+    <select id="queryByNewTime" resultType="com.study.pojo.Notice">
+        select * from notice order by id desc  limit 1
+    </select>
+
+
+</mapper>

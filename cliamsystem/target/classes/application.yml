@@ -1,0 +1,31 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+#连接数据库相关信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/lostfound?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+#配置热部署
+  devtools:
+    livereload:
+      enabled: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  mvc:
+    static-path-pattern: /images/**
+  web:
+    resources:
+      static-locations: file:D://images/
+#配置mybatis
+mybatis-plus:
+  type-aliases-package: com.study.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/study/dao/*.xml

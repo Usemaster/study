@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.dao.TypeMapper">
+    
+    <select id="queryList" parameterType="string" resultType="com.study.pojo.Type">
+        select * from type
+        <where>
+            <if test="typeName!=null and typeName!=''">
+                and type_name like '%${typeName}%'
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <insert id="insertType" parameterType="com.study.pojo.Type">
+        insert into type(type_name)values(#{typeName})
+    </insert>
+
+    <delete id="deleteTypeByID" parameterType="int">
+        delete from type where id = #{id}
+    </delete>
+    
+    <select id="getCountsByType" resultType="com.study.vo.TypeVo">
+        select type_name ,count(id) as counts from post group by type_name
+    </select>
+    
+</mapper>

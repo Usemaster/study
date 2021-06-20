@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.dao.PostMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.study.pojo.Post">
+                <id column="id" property="id"/>
+                <result column="uname" property="uname"/>
+                <result column="type_name" property="typeName"/>
+                <result column="title" property="title"/>
+                <result column="content" property="content"/>
+                <result column="picture" property="picture"/>
+                <result column="address" property="address"/>
+                <result column="ctime" property="ctime"/>
+                <result column="status" property="status"/>
+                <result column="flag" property="flag"/>
+                <result column="view_count" property="viewCount"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uname, type_name, title, content, picture, address, ctime, status, flag, view_count
+    </sql>
+
+    <select id="queryList" parameterType="com.study.pojo.Post" resultType="com.study.pojo.Post">
+        select * from post
+        <where>
+            <if test="status!=null">
+                and status = #{status}
+            </if>
+            <if test="flag!=null">
+                and flag = #{flag}
+            </if>
+            <if test="title!=null and title !=''">
+                and title like '%${title}%'
+            </if>
+            <if test="typeName!=null and typeName!=''">
+                and type_name =#{typeName}
+            </if>
+            <if test="uname!=null and uname!=''">
+                and uname =#{uname}
+            </if>
+        </where>
+        order by  id desc
+    </select>
+
+    <select id="getCountsByFlagAndStatus" resultType="int">
+        select count(id) from post where flag = #{flag} and status = #{status}
+    </select>
+
+
+    <resultMap id="getInfoByIdMap" type="com.study.pojo.Post" extends="BaseResultMap">
+        <association property="user" javaType="com.study.pojo.User">
+            <id column="id" property="id"/>
+            <result column="username" property="username"/>
+            <result column="reward_code" property="rewardCode"/>
+            <result column="sex" property="sex"/>
+            <result column="age" property="age"/>
+            <result column="personal_say" property="personalSay"/>
+            <result column="photo" property="photo"/>
+        </association>
+
+        <collection property="commentList" ofType="com.study.pojo.CommentVo">
+            <id column="cid" property="id"/>
+            <result column="contents" property="content"/>
+            <result column="ctimes" property="ctime"/>
+            <result column="unames" property="uname"/>
+            <result column="parents" property="parent"/>
+            <result column="postId" property="postId"/>
+            <result column="uphoto" property="uphoto"></result>
+            <collection property="list" ofType="com.study.pojo.CommentVo">
+                <id column="cid2" property="id"/>
+                <result column="content2" property="content"/>
+                <result column="ctime2" property="ctime"/>
+                <result column="uname2" property="uname"/>
+                <result column="parent2" property="parent"/>
+                <result column="postId2" property="postId"/>
+                <result column="uphoto2" property="uphoto"></result>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="getInfoById" resultMap="getInfoByIdMap" parameterType="long">
+        SELECT
+            p.*, u.personal_say,
+            u.reward_code,
+            u.sex,
+            u.age,
+            u.username,
+            u.photo ,
+            c.content AS contents,
+            c.ctime AS ctimes,
+            c.uname AS unames,
+            c.parent as parents,
+            c.id AS cid,
+            c.post_id AS postId,
+            c2.content AS content2,
+            c2.ctime AS ctime2,
+            c2.uname AS uname2,
+            c2.id AS cid2,
+            c2.post_id AS postId2,
+            c2.parent as parent2,
+            u2.photo as uphoto,
+            u3.photo as uphoto2
+
+        FROM
+            post p
+                LEFT JOIN USER u ON u.username = p.uname
+                LEFT JOIN `comment` c ON c.post_id = p.id
+                AND c.parent IS NULL
+                LEFT JOIN USER u2 ON u2.username = c.uname
+                LEFT JOIN `comment` c2 ON c2.parent = c.id
+                LEFT JOIN USER u3 ON u3.username = c2.uname
+        where p.id=#{id}
+    </select>
+
+</mapper>
