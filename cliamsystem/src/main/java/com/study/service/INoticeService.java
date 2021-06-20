@@ -2,6 +2,7 @@ package com.study.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.pagehelper.PageInfo;
 import com.study.pojo.Notice;
 
 /**
@@ -10,7 +11,7 @@ import com.study.pojo.Notice;
  * </p>
  *
  * @author kappy
- * @since 2021-06-14
+ * @since 2021-01-07
  */
 public interface INoticeService extends IService<Notice> {
 
@@ -26,7 +27,7 @@ public interface INoticeService extends IService<Notice> {
     /**
      * 添加
      *
-     * @param notice 
+     * @param notice
      * @return int
      */
     int add(Notice notice);
@@ -42,7 +43,7 @@ public interface INoticeService extends IService<Notice> {
     /**
      * 修改
      *
-     * @param notice 
+     * @param notice
      * @return int
      */
     int updateData(Notice notice);
@@ -55,6 +56,8 @@ public interface INoticeService extends IService<Notice> {
      */
     Notice findById(Long id);
 
-    //查询公告最新信息
     Notice queryByNewTime();
+
+    PageInfo<Notice> findAll(int page, int pageSize, String title);
 }
+

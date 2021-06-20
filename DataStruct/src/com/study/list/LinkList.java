@@ -2,11 +2,6 @@ package com.study.list;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Accper
- *
- */
 public class LinkList implements IList {
     // 单链表的头指针
     private Node head;

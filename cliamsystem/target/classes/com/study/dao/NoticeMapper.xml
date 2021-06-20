@@ -20,5 +20,14 @@
         select * from notice order by id desc  limit 1
     </select>
 
+    <select id="queryList" resultType="com.study.pojo.Notice" parameterType="string">
+        select * from notice
+        <where>
+            <if test="title!=null and title!=''">
+                and title like '%${title}%'
+            </if>
+        </where>
+    </select>
+
 
 </mapper>

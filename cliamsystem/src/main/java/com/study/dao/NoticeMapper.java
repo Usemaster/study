@@ -2,7 +2,10 @@ package com.study.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.study.pojo.Notice;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,5 +19,7 @@ import org.springframework.stereotype.Component;
 public interface NoticeMapper extends BaseMapper<Notice> {
 
     Notice queryByNewTime();
+
+    List<Notice> queryList(@Param("title") String title);
 
 }
