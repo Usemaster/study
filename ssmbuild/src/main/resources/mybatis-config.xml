@@ -12,7 +12,7 @@
         <package name="com.study.pojo"/>
     </typeAliases>
     <mappers>
-        <mapper class="com.study.dao.BookMapper"/>
+        <mapper class="com.study.dao.GoodMapper"/>
     </mappers>
 
 </configuration>

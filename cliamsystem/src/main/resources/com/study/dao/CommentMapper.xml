@@ -17,7 +17,7 @@
         id, post_id, uname, content, ctime, parent
     </sql>
 
-    <select id="getCommentCounts" parameterType="long" resultType="int">
+    <select id="getCommentCounts" resultType="int">
         select count(id) from comment where post_id=#{postId}
     </select>
 

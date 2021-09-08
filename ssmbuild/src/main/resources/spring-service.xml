@@ -16,9 +16,20 @@
     <!-- 扫描service相关的bean -->
     <context:component-scan base-package="com.study.service" />
 
+    <context:property-placeholder location="classpath:db.properties"/>
+
+
     <!--BookServiceImpl注入到IOC容器中-->
-    <bean id="BookServiceImpl" class="com.study.service.BookServiceImpl">
-        <property name="bookMapper" ref="bookMapper"/>
+<!--    <bean id="GoodServiceImpl" class="GoodServiceImpl">-->
+<!--        <property name="goodMapper" ref="goodMapper"/>-->
+<!--    </bean>-->
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driver" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
 
     <!-- 配置事务管理器 -->
@@ -30,19 +41,19 @@
     <!--事务支持-->
     <!--结合AOP实现事务的织入-->
     <!--配置事务通知：-->
-<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">-->
-<!--        &lt;!&ndash;给那些方法配置事务&ndash;&gt;-->
-<!--        &lt;!&ndash;配置事务的传播特性：new propagation&ndash;&gt;-->
-<!--        <tx:attributes>-->
-<!--            <tx:method name="*" propagation="REQUIRED"/>-->
-<!--        </tx:attributes>-->
-<!--    </tx:advice>-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--给那些方法配置事务-->
+        <!--配置事务的传播特性：new propagation-->
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
 
 <!--    &lt;!&ndash;配置事务切入&ndash;&gt;-->
-<!--    <aop:config>-->
-<!--        <aop:pointcut id="txPointCut" expression="execution(* com.study.dao.*.*(..))"/>-->
-<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>-->
-<!--    </aop:config>-->
+    <aop:config>
+        <aop:pointcut id="txPointCut" expression="execution(* com.study.dao.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+    </aop:config>
 
 
 </beans>

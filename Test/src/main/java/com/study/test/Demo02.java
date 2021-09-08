@@ -1,2 +1,4 @@
-package com.study.test;public interface Demo02 {
+package com.study.test;
+
+public interface Demo02 {
 }

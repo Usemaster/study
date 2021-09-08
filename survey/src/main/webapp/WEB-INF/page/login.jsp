@@ -92,7 +92,7 @@
                 contentType:'application/json',
                 dataType:'json',
                 success:function (data){
-                    if (data.code == 0){
+                    if (data.code =z= 0){
                         location.href = "index";
                     }else{
                         layer.msg(data.msg)

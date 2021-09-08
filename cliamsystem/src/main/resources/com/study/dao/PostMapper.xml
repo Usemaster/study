@@ -17,12 +17,18 @@
                 <result column="view_count" property="viewCount"/>
     </resultMap>
 
-    <!-- 通用查询结果列 -->
-    <sql id="Base_Column_List">
-        id, uname, type_name, title, content, picture, address, ctime, status, flag, view_count
-    </sql>
-
-    <select id="queryList" parameterType="com.study.pojo.Post" resultType="com.study.pojo.Post">
+<!--    &lt;!&ndash; 通用查询结果列 &ndash;&gt;-->
+<!--    <sql id="Base_Column_List">-->
+<!--        id, uname, type_name, title, content, picture, address, ctime, status, flag, view_count-->
+<!--    </sql>-->
+    <resultMap id="queryIndexList" type="com.study.pojo.Post" extends="BaseResultMap">
+       <association property="user" javaType="com.study.pojo.User">
+           <id column="id" property="id"/>
+           <result column="username" property="username"/>
+           <result column="photo" property="photo"/>
+       </association>
+    </resultMap>
+    <select id="queryList" resultMap="queryIndexList">
         select * from post
         <where>
             <if test="status!=null">

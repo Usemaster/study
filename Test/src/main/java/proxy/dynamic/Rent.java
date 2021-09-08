@@ -1,2 +1,7 @@
-package proxy.dynamic;public interface Rent {
+package proxy.dynamic;
+
+public interface Rent {
+
+    public void rent();
+
 }
