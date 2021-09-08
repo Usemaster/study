@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.dao.GoodMapper">
+
+    <!--增加一个Book-->
+    <insert id="addGood" parameterType="Goods">
+      insert into goods(name,address,price)
+      values (#{name}, #{address}, #{price})
+   </insert>
+
+    <!--根据id删除一个Book-->
+    <delete id="deleteGoodById" parameterType="int">
+      delete from ssmbuild.goods where bookID=#{bookID}
+   </delete>
+
+    <!--更新Book-->
+    <update id="updateGood" parameterType="Goods">
+      update ssmbuild.goods
+      set bookName = #{bookName},bookCounts = #{bookCounts},detail = #{detail}
+      where bookID = #{bookID}
+   </update>
+
+    <!--根据id查询,返回一个Book-->
+    <select id="queryGoodById" resultType="Goods">
+      select * from ssmbuild.goods
+      where id = #{id}
+   </select>
+
+    <!--查询全部Book-->
+    <select id="queryAllGood" resultType="Goods">
+      SELECT * from ssmbuild.goods
+   </select>
+
+    <select id="queryGoodByName" resultType="Goods">
+        select * from ssmbuild.goods where bookName = #{bookName}
+    </select>
+
+</mapper>
