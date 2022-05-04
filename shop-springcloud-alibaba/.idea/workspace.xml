@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00fd280a-41e7-4606-a76d-056ce132a046" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/ch04/MyJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/ch04/TestPriorityBlockingQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/StatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/lambda/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/lambda/LambdaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/lambda/MyFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/oom/HeapOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/oom/JavaVMStackOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/demo/com/usemaster/stream/StreamApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/ExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/ExtendTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/FinalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/Inc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/InterfaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/Lambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/ObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/StreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/TestC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/TestCopyOnWriteArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/DetailTest/TypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/algorithm/Demo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/algorithm/Demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/algorithm/Demo3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/algorithm/GetAverages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/algorithm/MaxSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/enum1/Enum1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/lambda/LambdaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/LRUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/LRUCache01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/MinDepth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/MonkeyChooseKing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/Permute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/SmallestEqual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/TwoSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/leetcode/findPeek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nio/TestChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/AbstractClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/CharTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/ChildClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/EqualsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/ExtendTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/InterfaceClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/MyClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/StaticTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/StringDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/SuperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/Test01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/TestDog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/ValueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/nowcoder/ZeroTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/sort/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/sort/SelectSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test/Base.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test/Test_01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Bground.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Calf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Cow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Demo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Example.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/OuterClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/StateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/StatusImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/StreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/SynchronizedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Test01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Test02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Test03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/Threads4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/VolatileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/threadtest/LoopPrint123.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/threadtest/ThreadDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/CountString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/ExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/GenerateCityTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/IntegerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/MaxIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/MergeArr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Modify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Test01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Test02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/WordReverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/writtenexamination/Z.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Son1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Son2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Test02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Test03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Test04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/TestMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/TransactionSerial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/TransactionSerialImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/UserQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/UserQueryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test01/Couplets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test01/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test01/Demo04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test01/Sub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test01/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__com_alibaba_druid_1_2_62.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_202.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__io_swagger_swagger_models_1_5_202.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_142.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_5_42.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_92.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_92.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_yaml_snakeyaml_1_282.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/src/main/java/com/study/test01/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/src/test/java/com/study/test/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cliamsystem/.idea/dataSources/9a5241f7-31c0-47db-b537-9d1cc104eb5d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cliamsystem/.idea/dataSources/9a5241f7-31c0-47db-b537-9d1cc104eb5d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/artifacts/demo1_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/artifacts/demo1_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_42.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_5_42.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_12_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_12_RELEASE2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboottest/demo1/src/main/java/com/study/configure/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboottest/demo1/src/main/java/com/study/configure/MvcConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Maven\Localhouse" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\Maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="28hh13AOd8uBEq8z8Uj5roM1q81" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00fd280a-41e7-4606-a76d-056ce132a046" name="Default Changelist" comment="" />
+      <created>1651674508543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651674508543</updated>
+      <workItem from="1651674509755" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
