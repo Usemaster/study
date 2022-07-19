@@ -1,8 +1,8 @@
 package com.study.test;
 
 import org.junit.Test;
+import sun.reflect.generics.tree.VoidDescriptor;
 
-import javax.swing.plaf.PanelUI;
 import java.util.*;
 
 public class Test01 {
@@ -130,8 +130,172 @@ public class Test01 {
         }
     }
 
+    @Test
+    public void test14(){
+        int a = Integer.parseInt("1024");
+
+        int b = Integer.valueOf("1024").intValue();
+
+        System.out.println(a == b);
+    }
+
+    @Test
+    public void test15(){
+        System.out.println(7/-3);
+    }
+
+    @Test
+    public void test16(){
+        String str = "";
+        System.out.print(str.split(",").length);
+        double d1=-0.5;
+        System.out.println("Ceil d1="+Math.ceil(d1));
+        System.out.println("floor d1="+Math.floor(d1));
+    }
+
+    @Test
+    public void test17(){
+        String s = "祝你考出好成绩！";
+        System.out.println(s.length());
+    }
+
+    @Test
+    public void test18(){
+        String s;
+//        System.out.println(s);
+    }
+
+    @Test
+    public void test19(){
+        System.out.println(12 % 2);
+    }
 
 
+    @Test
+    public void test20(){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (j == 2){
+                    continue;
+//                    break;
+                }
+                System.out.println(j);
+            }
+        }
+    }
+    @Test
+    public void test21(){
+        System.out.println(Math.round(11.5));
+        System.out.println(Math.round(-11.5));
+    }
+
+    @Test
+    public void test22(){
+        System.out.println(5 & 1);
+        System.out.println(5 ^ 5 ^ 3);
+    }
+
+    @Test
+    public void test23(){
+        System.out.println(1 / 2);
+        System.out.println(1 % 2);
+        System.out.println(0 % 2);
+    }
+
+    @Test
+    public void test24(){
+        List  Listlist1 = new ArrayList();
+        Listlist1.add(0);
+        List Listlist2 = Listlist1;
+        System.out.println(Listlist1.get(0) instanceof Integer);
+        System.out.println(Listlist2.get(0) instanceof Integer);
+    }
+
+
+    @Test
+    public void test25(){
+        double d = 5.3e12;
+        System.out.println(d);
+    }
+
+    @Test
+    public void test26(){
+        int i = 1;
+        i = i++;
+        int j = i++;
+        int k = i + ++i * i++;
+        System.out.println("i="+i);
+        System.out.println("j="+j);
+        System.out.println("k="+k);
+
+    }
+
+    @Test
+    public void test27(){
+//        int a [10];
+//        int a [];
+//        int a[] = new int[10];
+//        int a [] = {1,2,3,4,5};
+        int x = 1;
+        float y = 2;
+        System.out.println(x / y);
+    }
+
+    @Test
+    public void test28(){
+        Integer a = new Integer(46);
+        Integer b = new Integer(46);
+        Integer c = 128;
+        Integer d = 128;
+        System.out.println(c == d);
+        System.out.println(c.equals(d));
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+    }
+
+    @Test
+    public void test29(){
+        System.out.println(45 % 3);
+    }
+
+    @Test
+    public void  test30(){
+        Example example = new Example();
+        example.run();
+        System.out.println("main");
+    }
+
+    @Test
+    public void test31(){
+        String str = "";
+        System.out.println(str.split(",").length);
+    }
+
+    @Test
+    public void test32(){
+//        System.out.println(AccountType.FIXED);
+        System.out.println(Math.floor(-8.5));
+        float f = 3;
+        System.out.println(f);
+    }
+
+    enum AccountType{
+        SAVING,FIXED,CURRENT;
+        private AccountType(){
+            System.out.println("It is a account type");
+        }
+    }
+
+    public class Example extends Thread{
+        public void run(){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("run");
+        }
+    }
 
     public static void mystery (int x)
     {

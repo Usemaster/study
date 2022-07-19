@@ -1,2 +1,5 @@
-package com.study.test01;public class StatusImpl {
+package com.study.test01;
+
+public abstract class StatusImpl implements Status{
+
 }

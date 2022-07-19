@@ -1,2 +1,6 @@
-package com.study.test01;public class StateImpl {
+package com.study.test01;
+
+public abstract class StateImpl extends State{
+
+
 }

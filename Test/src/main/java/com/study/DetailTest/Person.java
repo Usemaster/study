@@ -1,3 +1,7 @@
+package com.study.DetailTest;
+
+import java.util.Objects;
+
 public class Person implements Comparable<Person> {//如果使用sorted()排序，使用该行
     //public class Person {//如果使用sorted(Comparator<T>)排序,使用该行
     private String name;
@@ -15,8 +19,7 @@ public class Person implements Comparable<Person> {//如果使用sorted()排序�
         this.age = age;
     }
     //省略setter、getter...
-   //以下是IDEA自动重写的equals()和hashCode()方法，就是根据当前类的属性name、age是否
-相同来判断是否是同一个对象
+   //以下是IDEA自动重写的equals()和hashCode()方法，就是根据当前类的属性name、age是否相同来判断是否是同一个对象
     @Override
     public boolean equals(Object o) {
          if (this == o) return true;
@@ -35,6 +38,22 @@ public class Person implements Comparable<Person> {//如果使用sorted()排序�
                   "name='"+ name + '\'' +
                   ", age="+ age +
                   '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
