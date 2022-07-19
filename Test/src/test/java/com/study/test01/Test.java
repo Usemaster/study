@@ -123,4 +123,9 @@ public class Test {
         System.out.println(list);
     }
 
+    @org.junit.Test
+    public void test06(){
+        System.out.println("merge to master test");
+    }
+
 }
