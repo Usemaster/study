@@ -126,6 +126,7 @@ public class Test {
     @org.junit.Test
     public void test06(){
         System.out.println("merge to master test");
+        System.out.println("merge to master test1");
     }
 
 }
