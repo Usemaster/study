@@ -31,6 +31,7 @@ public class DemoSender {
                 //设置透传类型 0是通知消息 1是透传消息
                 .passThrough(1)
                 // 使用默认提示音提示
+                .extra("channel_id","test")
                 .notifyType(1)
                 .build();
         //根据alias, 发送消息到指定设备上
