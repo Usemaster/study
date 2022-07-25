@@ -1,3 +1,5 @@
+package com.demo;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -40,10 +42,12 @@ import javax.crypto.Cipher;
      */
     public class Example {
         private static final String DOMAIN = "http://api.developer.xiaomi.com/devupload";
-
+        //推送应用到小米应用商店。
         private static final String PUSH = DOMAIN + "/dev/push";
         private static final String PUSH_CHANNEL_APK = DOMAIN + "/dev/pushChannelApk";
+        //通过应用包名查询小米应用商店内本账户推送的最新应用详情，用于判断是否需要进行应用推送。
         private static final String QUERY = DOMAIN + "/dev/query";
+        //查询小米应用商店的应用分类。
         private static final String CATEGORY = DOMAIN + "/dev/category";
 
         private static final int KEY_SIZE = 1024;
@@ -67,8 +71,8 @@ import javax.crypto.Cipher;
         /**
          * 公钥加密
          *
-         * @param data
-         * @param key
+         * @param str
+         * @param publicKey
          * @return
          * @throws Exception
          */

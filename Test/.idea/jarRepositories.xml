@@ -2,9 +2,19 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="centraluap" />
+      <option name="name" value="centraluap" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/groups/nccloud-all-repositories/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="YonyouCloud-Release" />
+      <option name="name" value="YonyouCloud-Release" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/YonyouCloud-Release/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -12,9 +22,39 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="zhizao-Release" />
+      <option name="name" value="zhizao-Release" />
+      <option name="url" value="http://maven.yonyou.com/repository/Zhizao-Release/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="zhizao-Snapshot" />
+      <option name="name" value="zhizao-Snapshot" />
+      <option name="url" value="http://maven.yonyou.com/repository/Zhizao-Snapshot/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="YonyouCloud-Snapshot" />
+      <option name="name" value="YonyouCloud-Snapshot" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/YonyouCloud-Snapshot/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="iUAP-Stagings" />
+      <option name="name" value="iUAP-Stagings" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/iUAP-Stagings/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="iUAP" />
+      <option name="name" value="iWeb" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/iUAP/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="iUAP-Snapshots" />
+      <option name="name" value="iUAP-Snapshots" />
+      <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/iUAP-Snapshots/" />
     </remote-repository>
   </component>
 </project>

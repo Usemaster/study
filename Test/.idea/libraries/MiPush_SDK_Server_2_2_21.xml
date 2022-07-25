@@ -4,6 +4,10 @@
       <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_2_2_21.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_2_2_21.jar!/" />
+    </SOURCES>
   </library>
 </component>
