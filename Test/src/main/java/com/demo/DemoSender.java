@@ -99,7 +99,9 @@ public class DemoSender {
                 .title(title)
                 .description(description).payload(messagePayload)
                 .restrictedPackageName(MY_PACKAGE_NAME)
-                .notifyType(1)     // 使用默认提示音提示
+                // 使用默认提示音提示
+                .extra("channel_id","test")
+                .notifyType(1)
                 .build();
         Result result = sender.send(message, regId, 3);
     }
