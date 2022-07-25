@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="MiPush_SDK_Server_Http2_1.0.11">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
