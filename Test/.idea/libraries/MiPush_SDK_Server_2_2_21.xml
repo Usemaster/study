@@ -1,13 +1,14 @@
 <component name="libraryTable">
   <library name="MiPush_SDK_Server_2_2_21">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_2_2_21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/commons-codec-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/conscrypt-openjdk-uber-2.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/json-simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/okhttp-3.14.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MiPush_SDK_Server_Http2-20201228/okio-1.17.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_Http2_1.0.11.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/resources/libs/MiPush_SDK_Server_2_2_21.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
