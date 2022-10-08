@@ -7,6 +7,20 @@
     <!--代表当前pom.xml所采用的标签结构-->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 使用parent标签指定当前工程的父工程 -->
+    <parent>
+        <!-- 父工程的坐标 -->
+        <groupId>com.study</groupId>
+        <artifactId>maven-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../yuncai/maven-parent/pom.xml</relativePath>
+    </parent>
+
+    <!-- 子工程的坐标 -->
+    <!-- 如果子工程坐标中的groupId和version与父工程一致，那么可以省略 -->
+    <!-- <groupId>Test</groupId> -->
+    <!-- <version>1.0-SNAPSHOT</version> -->
+
     <!---->
     <!--坐标信息-->
     <!--groupId 标签：坐标向量之一:代表公司或组织开发的某一个项目-->
@@ -41,6 +55,20 @@
    </properties>
     <!-- dependencies标签:配置具体依赖信息，可以包含多个dependency子标签-->
    <dependencies>
+       <dependency>
+           <groupId>com.study</groupId>
+           <artifactId>mavenTest</artifactId>
+           <version>1.0-SNAPSHOT</version>
+           <!-- 使用excludes标签配置依赖的排除  -->
+           <exclusions>
+               <!-- 在exclude标签中配置一个具体的排除 -->
+               <exclusion>
+                   <!-- 指定要排除的依赖的坐标（不需要写version） -->
+                   <groupId>commons-logging</groupId>
+                   <artifactId>commons-logging</artifactId>
+               </exclusion>
+           </exclusions>
+       </dependency>
        <!-- dependency标签:配置一个具体的依赖信息-->
        <dependency>
            <!--坐标信息:导入哪个jar 包，就配置它的坐标信息即可-->
@@ -123,5 +151,28 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+       <!-- 子工程引用父工程中的依赖信息时，可以把版本号去掉。  -->
+       <!-- 把版本号去掉就表示子工程中这个依赖的版本由父工程决定。 -->
+       <!-- 具体来说是由父工程的dependencyManagement来决定。 -->
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-core</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-beans</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-expression</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-aop</artifactId>
+       </dependency>
     </dependencies>
 </project>

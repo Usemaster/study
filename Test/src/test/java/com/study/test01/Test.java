@@ -1,5 +1,7 @@
 package com.study.test01;
 
+import com.study.HelloWorld;
+
 import java.util.*;
 
 public class Test {
@@ -127,6 +129,11 @@ public class Test {
     public void test06(){
         System.out.println("merge to master test");
         System.out.println("merge to master test1");
+    }
+
+    @org.junit.Test
+    public void test07(){
+        HelloWorld.main(new String[]{});
     }
 
 }

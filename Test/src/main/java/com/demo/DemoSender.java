@@ -1,11 +1,7 @@
 package com.demo;
 
 import com.xiaomi.xmpush.server.*;
-import org.json.simple.parser.ParseException;
 import org.junit.Test;
-
-import java.io.IOException;
-
 
 /**
  * @author gongwj
