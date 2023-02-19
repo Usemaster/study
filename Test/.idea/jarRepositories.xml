@@ -87,6 +87,11 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="jfrog" />
+      <option name="name" value="jfrog" />
+      <option name="url" value="https://repo.yyrd.com/artifactory/yonyou-public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="Nuxeo" />
       <option name="name" value="Nuxeo" />
       <option name="url" value="http://maven.yonyou.com/nexus/content/groups/nccloud-all-repositories/" />
@@ -137,6 +142,16 @@
       <option name="url" value="http://maven.yonyou.com/nexus/content/groups/nccloud-all-repositories/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="nccloud-releases" />
+      <option name="name" value="nccloud-releases" />
+      <option name="url" value="https://repo.yyrd.com/artifactory/nccloud-releases-mvn-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nccloud-all-mvn-virtual" />
+      <option name="name" value="nccloud-all-mvn-virtual" />
+      <option name="url" value="https://repo.yyrd.com/artifactory/nccloud-all-mvn-virtual" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="UAP_WEB2.0" />
       <option name="name" value="UAP_WEB2.0" />
       <option name="url" value="http://maven.yonyou.com/nexus/content/repositories/UAP_WEB2.0" />
@@ -185,6 +200,11 @@
       <option name="id" value="UAP_WEB2.0" />
       <option name="name" value="UAP_WEB2.0" />
       <option name="url" value="http://maven.yonyou.com/nexus/content/groups/nccloud-all-repositories/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nccloud-snapshots" />
+      <option name="name" value="nnccloud-snapshots" />
+      <option name="url" value="https://repo.yyrd.com/artifactory/nccloud-snapshots-mvn-local" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />
