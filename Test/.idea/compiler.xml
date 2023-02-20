@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Test" />
         <module name="mavenTest" />
-        <module name="account-parent" />
         <module name="account-captcha" />
       </profile>
     </annotationProcessing>
